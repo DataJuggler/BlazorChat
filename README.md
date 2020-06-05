@@ -1,5 +1,9 @@
 # BlazorChat
-Blazor Chat was originally a sample project of mine DataJuggler.Blazor.Components, but I decided it will be easier to maintain as its own project.
+Blazor Chat was originally a sample project of mine DataJuggler.Blazor.Components, but I decided it will be easier to maintain in its own project.
+
+<br>
+<img src=https://github.com/DataJuggler/SharedRepo/blob/master/Shared/Images/BlazorChatHyperlinksWorking.png>
+<br>
 
 To run this sample you will need SQL Server or SQL Server Express.
 
