@@ -39,18 +39,49 @@ My open source project DataTier.Net mentioned in Step 2 comes with a Connection 
 The image here shows the database for DataTier.Net. Change the Server Name to your Server name and set the database name to BlazorChat.<br><br>
 <br>
 <b>Step 4:</b> Run the App. I use Chrome as my main debugging app for Visual Studio, then I launch an Edge
-and a Fire Fox instance if I want 3 users to test on my local machine.
+and a Fire Fox instance if I want 3 users to test on my local machine.<br>
 
 <b>Known issues:</b>
 
-I added a dispose method, and in theory when the user closers their browser, this should unsubscribe.
+<b>1. Periodic Dispose</b>
+I added a dispose method, and in theory when the user closes their browser, this should unsubscribe.
 A few days ago I had a power failure during a storm, and I am fairly sure during a hard close no code is going to
-execute without power to the browser, so a "Remove If Idle" method is probably needed, where each user
-would be pinged periodically and if there wasn't a response they are removed from the list of Subscribers.
+execute without power to the browser, so a "Remove If Idle" method is probably needed. Where each user
+would be pinged periodically and if there ins't a response they are removed from the list of Subscribers.<br>
 
+<b>2. The Remember Me checkbox position moves sometimes after a new user signs up</b>
+The position is fine for a returning user, so I hate to dabble with it, but please if anyone feels capable of solving the why this happens, I would like to know because I have the same bug on my site https://pixeldatabase.net, because most of the code for this app
+came from PixelDatabase.Net.
+
+<b>3. Sometimes a login fails and I have not been shown a message. I have added some code to try and fix this, but not sure if it helped or not at this point yet</b>
+
+<br>
+<b>Geek Zone</b>
+<img src=https://github.com/DataJuggler/SharedRepo/blob/master/Shared/Images/Codey.png>
+<br>
+<b>Under The Hood Areas Of Interest areas</b>
+1. Index.razor and Index.razor.cs. This is the main page of the app and the method SetupScreen(ScreenTypeEnum screenType) is called by the child components Login.razor or Join.razor.
+
+ScreenType enum has 3 options:
+
+    public enum ScreenTypeEnum : int
+    {
+        Main = 0,
+        Join = 1,
+        Login = 2
+    }
+
+If a user is not logged in, they are shown this message:<br>
+<img src=https://github.com/DataJuggler/BlazorChat/blob/master/wwwroot/Images/SignUpToChat.png>
+<br>
+    
+2. 
+
+<br>
+<b>State Of the App</b>
 I am a little past prototype at this stage, but a large amount of testing has not been done.
 I am sure there are probably plenty of bugs once others start using this. 
-I will publish it to my server soon with a live sample. 
+I will publish it to my server soon with a live sample.<br><br>
 
 <b>Suggestions for version 2.0:</b>
 1. I added links and you can post HTML if you know it, but I think the next features are going to be post images and video
