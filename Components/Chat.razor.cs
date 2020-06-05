@@ -279,6 +279,9 @@ namespace BlazorChat.Components
                     
                     // Send the message
                     SubscriberService.BroadcastMessage(newMessage);
+
+                    // 6.5.2020: Get the Messages as you connect now
+                    this.Messages = SubscriberService.GetBroadcastMessages(this.Id);
                 }
 
                 // Update
