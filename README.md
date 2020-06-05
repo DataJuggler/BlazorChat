@@ -23,7 +23,7 @@ Replace ServerName with the name of your SQL Server Instance. The easiest way to
 to SQL Server Management Studio, and copy the User Name it tries to log you in with, if you have it saved.
 
 My open source project DataTier.Net mentioned in Step 2 comes with a Connection String Builder app, located in the Tools folder:
-
+<img src=https://github.com/DataJuggler/DataTier.Net/blob/master/DataTier.Net/Class%20Room/Documents/Build%20Connection%20String.png>
 
 Step 4: Run the App. I use Chrome as my main debugging app for Visual Studio, then I launch an Edge
 and a Fire Fox instance if I want 3 users to test on my local machine.
