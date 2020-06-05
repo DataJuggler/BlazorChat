@@ -22,6 +22,7 @@ using BlazorChat.Enumerations;
 using ObjectLibrary.BusinessObjects;
 using DataJuggler.Core.Cryptography;
 using DataGateway.Services;
+using ApplicationLogicComponent.Connection;
 
 #endregion
 
@@ -224,7 +225,7 @@ namespace BlazorChat.Components
                 if (NullHelper.Exists(user))
                 {
                      // Get the KeyCode
-                    string keyCode = EnvironmentVariableHelper.GetEnvironmentVariableValue("FiveByFiveGame");
+                    string keyCode = EnvironmentVariableHelper.GetEnvironmentVariableValue(Connection.Name);
 
                     // If the keyCode string exists
                     if (TextHelper.Exists(keyCode))

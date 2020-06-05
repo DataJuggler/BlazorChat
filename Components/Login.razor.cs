@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Components;
 using System.Threading;
 using System.Threading.Tasks;
 using BlazorChat.Enumerations;
+using ApplicationLogicComponent.Connection;
 
 #endregion
 
@@ -276,7 +277,7 @@ namespace BlazorChat.Components
                     if (NullHelper.Exists(user))
                     {
                         // Get the KeyCode
-                        string keyCode = EnvironmentVariableHelper.GetEnvironmentVariableValue("FiveByFiveGame");
+                        string keyCode = EnvironmentVariableHelper.GetEnvironmentVariableValue(Connection.Name);
 
                         // verify the user is logged in
                         bool verified = CryptographyHelper.VerifyHash(password, keyCode, user.PasswordHash);
@@ -321,6 +322,14 @@ namespace BlazorChat.Components
                             ParentIndexPage.SetupScreen(ScreenTypeEnum.Main);
                         }
                     }
+                    else
+                    {
+                        // Set the message
+                        ValidationMessage = "The credentials entered were either not found or invalid.";
+
+                        // hide the progress
+                        ShowProgress = false;
+                    }
                 }
                 catch (Exception error)
                 {
@@ -362,9 +371,16 @@ namespace BlazorChat.Components
                     // if higher than 10
                     if (ExtraPercent >= 10)
                     {
-                        // Stop the timer
-                        InvisibleSprite.Stop();
+                        // Stop the timer                        
                         ShowProgress = false;
+                    }
+                    else if (ExtraPercent >= 20)
+                    {
+                        // Stop the Sprite
+                        InvisibleSprite.Stop();
+
+                        // Show a login failed message
+                        ValidationMessage = "The credentials entered were either not found or invalid.";
                     }
                 }
 

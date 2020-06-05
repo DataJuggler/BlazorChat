@@ -73,26 +73,6 @@
     height: .4vh;
     background-color: black;
 }
-.fivebyfiveboard
-{
-    background-image: url('../Images/FiveByFiveBoard.png');
-    width: 80%;
-    height: 64vh;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: fixed;
-    top: 20vh;
-    left: 4%;
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-.fivebyfiveboard:focus
-{
-    outline: none;
-}
 .greenbutton
 {
     background-image: url('../images/GreenButton.png'); 
