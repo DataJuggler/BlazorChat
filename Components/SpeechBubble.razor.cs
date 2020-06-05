@@ -2,16 +2,11 @@
 
 #region using statements
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Components;
-using DataJuggler.RandomShuffler;
-using DataJuggler.RandomShuffler.Core;
-using BlazorChat.Enumerations;
 using DataJuggler.UltimateHelper.Core;
 using DataJuggler.UltimateHelper.Core.Objects;
+using Microsoft.AspNetCore.Components;
+using System;
+using System.Collections.Generic;
 
 #endregion
 
