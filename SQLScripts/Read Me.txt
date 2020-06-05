@@ -13,7 +13,7 @@ Step 3: Create a System Environment Variable with the following values:
 
 Name: BlazorChat
 
-Value: Paste in the connection string to your app. 
+Value: Paste in the connection string to your BlazorChat database created in step 1. 
 
 My connection to SQL Server Express looks like this using Windows Authentication
 
@@ -22,7 +22,13 @@ Data Source=[ServerName]\SQLExpress;Initial Catalog=BlazorChat;Integrated Securi
 Replace ServerName with the name of your SQL Server Instance. The easiest way to get your server name is login
 to SQL Server Management Studio, and copy the User Name it tries to log you in with, if you have it saved.
 
-Step 3: Run the App. I use Chrome as my main debugging app for Visual Studio, then I launch an Edge
+My open source project DataTier.Net mentioned in Step 2 comes with a Connection String Builder app, located in the Tools folder:
+
+<br>
+<img src=https://github.com/DataJuggler/DataTier.Net/blob/master/DataTier.Net/Class%20Room/Documents/Build%20Connection%20String.png>
+<br>
+
+Step 4: Run the App. I use Chrome as my main debugging app for Visual Studio, then I launch an Edge
 and a Fire Fox instance if I want 3 users to test on my local machine.
 
 Known issues:
@@ -66,7 +72,6 @@ Let me know your thoughts, comments, suggestions etc. in the comments on the Bla
 video, which I am making now and my time machine is broken so I have to post it first.
 
 To Do: Publish url to cool video.
-
 
 
 
