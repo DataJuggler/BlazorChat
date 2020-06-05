@@ -49,7 +49,8 @@ namespace BlazorChat.Services
             #region BroadcastMessage(SubscriberMessage message)
             /// <summary>
             /// This method Broadcasts a Message to everyone that ins't blocked.
-            /// Note To Self: Add Blocked Feature
+            /// What it actually does is notify the Listener that they need to get new messages.
+            /// Note To Self: Add Blocked Feature.
             /// </summary>
             public void BroadcastMessage(SubscriberMessage message)
             {
@@ -109,14 +110,14 @@ namespace BlazorChat.Services
             }
             #endregion
             
-            #region GetMessages(Guid id)
+            #region GetMessages(Guid id, int count)
             /// <summary>
             /// This method returns a list of Messages
             /// </summary>
-            public List<SubscriberMessage> GetBroadcastMessages(Guid id)
+            public List<SubscriberMessage> GetBroadcastMessages(Guid id, int count)
             {
                 // initial value
-                List<SubscriberMessage> messages = this.Messages.Where(x => ((!x.IsPrivate) || (x.FromId == id) || (x.ToId == id))).Take(10).ToList();
+                List<SubscriberMessage> messages = this.Messages.Where(x => ((!x.IsPrivate) || (x.FromId == id) || (x.ToId == id))).Take(count).ToList();
                 
                 // return value
                 return messages;

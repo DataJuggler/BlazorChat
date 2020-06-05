@@ -53,6 +53,7 @@ namespace BlazorChat.Components
         private string progressStyle;
         private Sprite invisibleSprite;
         private int extraPercent;
+        private string position;
         private User loggedInUser;
         #endregion
 
@@ -853,6 +854,18 @@ namespace BlazorChat.Components
             {
                 get { return percentString; }
                 set { percentString = value; }
+            }
+            #endregion
+            
+            #region Position
+            /// <summary>
+            /// This property gets or sets the value for 'Position'.
+            /// </summary>
+            [Parameter]
+            public string Position
+            {
+                get { return position; }
+                set { position = value; }
             }
             #endregion
             

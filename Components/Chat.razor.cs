@@ -39,6 +39,7 @@ namespace BlazorChat.Components
         private List<IBlazorComponent> children;
         private List<SubscriberCallback> names;
         private RandomShuffler shuffler;
+        private int displayMessagesCount;
         #endregion
 
         #region Constructor
@@ -145,6 +146,9 @@ namespace BlazorChat.Components
                 // Create a Guid
                 this.Id = Guid.Empty;
 
+                // Changing the count to get the last 20 messages.
+                this.DisplayMessagesCount = 20;
+
                 // Create a Shuffler
                 Shuffler = new RandomShuffler(1, 6, 1, 10);
             }
@@ -171,7 +175,7 @@ namespace BlazorChat.Components
                     else
                     {  
                         // Get the Messages
-                        this.Messages = SubscriberService.GetBroadcastMessages(this.Id);
+                        this.Messages = SubscriberService.GetBroadcastMessages(this.Id, DisplayMessagesCount);
 
                         // Update the UI
                         Refresh();                   
@@ -281,7 +285,7 @@ namespace BlazorChat.Components
                     SubscriberService.BroadcastMessage(newMessage);
 
                     // 6.5.2020: Get the Messages as you connect now
-                    this.Messages = SubscriberService.GetBroadcastMessages(this.Id);
+                    this.Messages = SubscriberService.GetBroadcastMessages(this.Id, DisplayMessagesCount);
                 }
 
                 // Update
@@ -413,6 +417,17 @@ namespace BlazorChat.Components
             {
                 get { return connected; }
                 set { connected = value; }
+            }
+            #endregion
+            
+            #region DisplayMessagesCount
+            /// <summary>
+            /// This property gets or sets the value for 'DisplayMessagesCount'.
+            /// </summary>
+            public int DisplayMessagesCount
+            {
+                get { return displayMessagesCount; }
+                set { displayMessagesCount = value; }
             }
             #endregion
             
