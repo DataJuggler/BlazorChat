@@ -36,8 +36,8 @@ My open source project DataTier.Net mentioned in Step 2 comes with a Connection 
 
 <br>
 <img src=https://github.com/DataJuggler/DataTier.Net/blob/master/DataTier.Net/Class%20Room/Documents/Build%20Connection%20String.png>
-The image here shows the database for DataTier.Net. Change the database name to BlazorChat.<br>
-
+The image here shows the database for DataTier.Net. Change the database name to BlazorChat.<br><br>
+<br>
 Step 4: Run the App. I use Chrome as my main debugging app for Visual Studio, then I launch an Edge
 and a Fire Fox instance if I want 3 users to test on my local machine.
 
