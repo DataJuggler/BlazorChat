@@ -11,7 +11,13 @@ Step 1: In SQL Server Management Studio, create a database named BlazorChat.
 
 Step 2: Execute the SQL File located in the SQLScripts folder of this repo. This will create the Tables and Stored Procedures
 used by this project. If you want to learn how to create your own stored procedure powered data tiers, clone my project DataTier.Net:
-https://github.com/DataJuggler/DataTier.Net
+https://github.com/DataJuggler/DataTier.Net 
+
+Or here is a video on it, although I am overdue to make a new one.
+
+https://youtu.be/sowTLLeAfm8
+
+Please subscribe to my YouTube channel.
 
 Step 3: Create a System Environment Variable with the following values:
 
