@@ -60,7 +60,7 @@ I have added some code to try and fix this since, but not sure if it helped or n
 <b>Geek Zone</b>
 <img src=https://github.com/DataJuggler/SharedRepo/blob/master/Shared/Images/Codey.png>
 <br>
-<b>Under The Hood Areas Of Interest areas</b>
+<b>Under The Hood Areas Of Interest areas</b><br><br>
 <b>1. Index.razor and Index.razor.cs.</b><br>
 This is the main page of the app and the method SetupScreen(ScreenTypeEnum screenType) is called by the child components Login.razor or Join.razor.
 
