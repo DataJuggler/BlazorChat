@@ -69,6 +69,13 @@ namespace BlazorChat.Components
                 {
                     // set the return value
                     containsLink = ((text.Contains("http") || (text.Contains("https"))));
+
+                    // if the value for containsLink is false
+                    if (!containsLink)
+                    {
+                        // if the text ends with .Net, .Com or .Org, or add others add needed
+                        containsLink = TextEndsWithKnownExtension(text);
+                    }
                 }
 
                 // return value
@@ -131,10 +138,18 @@ namespace BlazorChat.Components
                                 foreach (Word word in words)
                                 {
                                     // if this is a link
-                                    if (StartsWithLink(word.Text))
-                                    {
+                                    if (StartsWithLink(word.Text, true))
+                                    {  
                                         // set the word as a href
                                         string temp = "<a href=" + word.Text + " target=_blank>" + word.Text + "</a>";
+
+                                        // if the word.Text ends with a known extension, but does not start with http or https
+                                        if ((TextEndsWithKnownExtension(word.Text)) && (!StartsWithLink(word.Text, false)))
+                                        {
+                                            // send the user to https. Its 2020, and if the user is send someone to an insecure site,
+                                            // they must specify http:// in the link, otherwise don't post a link to an insecure site.
+                                            temp = "<a href=https://" + word.Text + " target=_blank>" + word.Text + "</a>";
+                                        }
 
                                         // Replace out the word with the link
                                         formattedText = formattedText.Replace(word.Text, temp);
@@ -150,11 +165,11 @@ namespace BlazorChat.Components
             }
             #endregion
             
-            #region StartsWithLink(string text)
+            #region StartsWithLink(string text, bool allowImpliedLinks)
             /// <summary>
             /// This method returns the With Link
             /// </summary>
-            public bool StartsWithLink(string text)
+            public bool StartsWithLink(string text, bool allowImpliedLinks)
             {
                 // initial value
                 bool startsWithLink = false;
@@ -164,10 +179,42 @@ namespace BlazorChat.Components
                 {
                     // set the return value
                     startsWithLink = ((text.StartsWith("http") || (text.StartsWith("https"))));
+
+                    // if we haven't already deteremined its a link, one more chance
+                    if (!startsWithLink)
+                    {
+                        // this list may get maintained, for now I am just using .com, .net and .org
+                        if ((TextEndsWithKnownExtension(text)) && (allowImpliedLinks))
+                        {
+                            // This starts with a link
+                            startsWithLink = true;
+                        }
+                    }
                 }
                 
                 // return value
                 return startsWithLink;
+            }
+            #endregion
+            
+            #region TextEndsWithKnownExtension(string text)
+            /// <summary>
+            /// This method returns the Ends With Known Extension
+            /// </summary>
+            public bool TextEndsWithKnownExtension(string text)
+            {
+                // initial value
+                bool textEndsWithKnownExtension = false;
+
+                // If the text string exists
+                if (TextHelper.Exists(text))
+                {
+                    // set the return value
+                    textEndsWithKnownExtension = ((text.ToLower().EndsWith(".com")) || (text.EndsWith(".net")) || (text.EndsWith(".org")));
+                }
+                
+                // return value
+                return textEndsWithKnownExtension;
             }
             #endregion
             

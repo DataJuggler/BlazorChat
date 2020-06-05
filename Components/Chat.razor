@@ -35,9 +35,11 @@
     else
     { 
         <div id="ChatRoom" class="chatroom">
-            Enter Chat<br />
-            <input type="text" @bind="SubscriberName" /><br />
-            <button class="greenbutton6" @onclick="@RegisterWithServer">Connect</button>
+            <div class="moveup4">
+                Enter Chat<br />
+                <input type="text" @bind="SubscriberName" /><br />
+                <button class="greenbutton6" @onclick="@RegisterWithServer">Connect</button>
+            </div>
         </div>    
     }
 }
