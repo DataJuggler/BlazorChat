@@ -43,13 +43,15 @@ I am sure there are probably plenty of bugs once others start using this.
 I will publish it to my server soon with a live sample. 
 
 Suggestions for version 2.0:
-1. I was thinking of making the bubbles a little more like a Twitter post, where a user could post a link or image,
+1. I added links and you can post HTML if you know it, but I think the next features are going to be post images and video
 with maybe some like, Up / Down votes or Stars or something to rate posts.
 2. The current version only shows the last 10 messages. I didn't do anything involving private messages and priority,
 I just get the last 10 messages and show them if they are public, or to or from for private messages.
 3. I might save the messages to the database if I ever wanted to expand it to be not just a demo.
 4. I stubbed out a Blocked user list for users, but didn't do anything with it. Perhaps a 'Vote Off The Island' if
 a user is rude, abusive or a spammer.
+5. I will probably add a way to rate posts
+6. Some type of Admin feature so users can be warned first and then booted for abusive behavior.
 
 Mainly this was a demo. I strated to use GRPC, but every sample I tried with 2 way communication was overkill
 considering all I needed was to talk to a client that is on the same server as another. 
@@ -65,10 +67,10 @@ And then I inject this into my Chat component:
 This was all I needed to send messages to all users. 
 
 If you inspect the project, one of the more interesting parts is the 'Listen' method, which is set 
-in the RegisterWithServer method. The Listen method is a callback and that is how the server
-tells the client it is time to get new messages.
+in the RegisterWithServer method. The Listen method is a callback and that is the delegate the server
+calls to tell the client it is time to get new messages.
 
-Let me know your thoughts, comments, suggestions etc. in the comments on the BlazorChat
+Let me know your thoughts, comments, suggestions etc. by creating an issue here or in the comments on the BlazorChat
 video, which I am making now and my time machine is broken so I have to post it first.
 
 To Do: Publish url to cool video.
