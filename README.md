@@ -9,11 +9,11 @@ Step 2: Execute the SQL File located in the SQLScripts folder of this repo. This
 used by this project. If you want to learn how to create your own stored procedure powered data tiers, clone my project DataTier.Net:
 https://github.com/DataJuggler/DataTier.Net
 
-Step 2: Create a System Environment Variable with the following values:
+Step 3: Create a System Environment Variable with the following values:
 
 Name: BlazorChat
 
-Value: Paste in the connection string to your app. 
+Value: Paste in the connection string to your BlazorChat database created in step 1. 
 
 My connection to SQL Server Express looks like this using Windows Authentication
 
@@ -22,25 +22,20 @@ Data Source=[ServerName]\SQLExpress;Initial Catalog=BlazorChat;Integrated Securi
 Replace ServerName with the name of your SQL Server Instance. The easiest way to get your server name is login
 to SQL Server Management Studio, and copy the User Name it tries to log you in with, if you have it saved.
 
-Step 3: Run the App. I use Chrome as my main debugging app for Visual Studio, then I launch an Edge
+My open source project DataTier.Net mentioned in Step 2 comes with a Connection String Builder app, located in the Tools folder:
+[[https://github.com/DataJuggler/DataTier.Net/blob/master/DataTier.Net/Class%20Room/Documents/Build%20Connection%20String.png]]
+
+Step 4: Run the App. I use Chrome as my main debugging app for Visual Studio, then I launch an Edge
 and a Fire Fox instance if I want 3 users to test on my local machine.
 
 Known issues:
 
-1. You must login, create a user and click Remember password. Then login as that user so it remembers you,
-and then start the app again. This is my highest priority to fix this, I just got busy finishing everything else
-first. I will remove this once this is fixed.
-2. I don't really like my chat 'Bubbles', the ones I have now are my second attempt as my first attempt 
-involved bubbles with more of a 'Dialog Balloon' like a comic, but it didn't look good. I will play around
-with some designs now that I have it sort of working.
-3. I added a dispose method, and in theory when the user closers their browser, this should unsubscribe.
-A few days ago I had a power failure during a storm, and I am failry sure during a hard close no code is going to
-execute with power to the browser, so a "Remove If Idle" method is probably needed, where each user
+I added a dispose method, and in theory when the user closers their browser, this should unsubscribe.
+A few days ago I had a power failure during a storm, and I am fairly sure during a hard close no code is going to
+execute without power to the browser, so a "Remove If Idle" method is probably needed, where each user
 would be pinged periodically and if there wasn't a response they are removed from the list of Subscribers.
 
-Version 1 was a prototype.
-
-
+I am a little past prototype at this stage, but a large amount of testing has not been done.
 I am sure there are probably plenty of bugs once others start using this. 
 I will publish it to my server soon with a live sample. 
 
@@ -74,7 +69,6 @@ Let me know your thoughts, comments, suggestions etc. in the comments on the Bla
 video, which I am making now and my time machine is broken so I have to post it first.
 
 To Do: Publish url to cool video.
-
 
 
 
