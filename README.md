@@ -53,7 +53,7 @@ would be pinged periodically and if there ins't a response they are removed from
 The position is fine for a returning user, so I hate to dabble with it, but please if anyone feels capable of solving the why this happens, I would like to know because I have the same bug on my site https://pixeldatabase.net, because most of the code for this app
 came from PixelDatabase.Net.
 
-<b>3. A couple of times a login failed and I was not shown a message.<b><br>
+<b>3. A couple of times a login failed and I was not shown a message.</b><br>
 I have added some code to try and fix this since, but not sure if it helped or not at this point yet</b>
 
 <br>
