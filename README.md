@@ -7,9 +7,9 @@ Blazor Chat was originally a sample project of mine DataJuggler.Blazor.Component
 
 To run this sample you will need SQL Server or SQL Server Express.
 
-Step 1: In SQL Server Management Studio, create a database named BlazorChat.
+<b>Step 1:</b> In SQL Server Management Studio, create a database named BlazorChat.
 
-Step 2: Execute the SQL File located in the SQLScripts folder of this repo. This will create the Tables and Stored Procedures
+<b>Step 2:</b> Execute the SQL File located in the SQLScripts folder of this repo. This will create the Tables and Stored Procedures
 used by this project. If you want to learn how to create your own stored procedure powered data tiers, clone my project DataTier.Net:
 https://github.com/DataJuggler/DataTier.Net 
 
@@ -19,7 +19,7 @@ https://youtu.be/sowTLLeAfm8
 
 Please subscribe to my YouTube channel.
 
-Step 3: Create a System Environment Variable with the following values:
+<b>Step 3:</b> Create a System Environment Variable with the following values:
 
 Name: BlazorChat
 
@@ -38,10 +38,10 @@ My open source project DataTier.Net mentioned in Step 2 comes with a Connection 
 <img src=https://github.com/DataJuggler/DataTier.Net/blob/master/DataTier.Net/Class%20Room/Documents/Build%20Connection%20String.png>
 The image here shows the database for DataTier.Net. Change the Server Name to your Server name and set the database name to BlazorChat.<br><br>
 <br>
-Step 4: Run the App. I use Chrome as my main debugging app for Visual Studio, then I launch an Edge
+<b>Step 4:</b> Run the App. I use Chrome as my main debugging app for Visual Studio, then I launch an Edge
 and a Fire Fox instance if I want 3 users to test on my local machine.
 
-Known issues:
+<b>Known issues:</b>
 
 I added a dispose method, and in theory when the user closers their browser, this should unsubscribe.
 A few days ago I had a power failure during a storm, and I am fairly sure during a hard close no code is going to
@@ -52,7 +52,7 @@ I am a little past prototype at this stage, but a large amount of testing has no
 I am sure there are probably plenty of bugs once others start using this. 
 I will publish it to my server soon with a live sample. 
 
-Suggestions for version 2.0:
+<b>Suggestions for version 2.0:</b>
 1. I added links and you can post HTML if you know it, but I think the next features are going to be post images and video
 with maybe some like, Up / Down votes or Stars or something to rate posts.
 2. The current version only shows the last 10 messages. I didn't do anything involving private messages and priority,
