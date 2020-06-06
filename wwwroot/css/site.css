@@ -502,6 +502,16 @@
     left: -11%;
     top: -1vh;
 }
+.signupcontrols
+{
+    line-height: 3.2vh;
+    font-size: 2.4vh;
+    font-family: Arial, Verdana;    
+    margin-top: 2vh;
+    margin-left: 2%;
+    margin-bottom: 1vh;
+    color: lemonchiffon;
+}
 .signupcontainer
 {
     background-image: url('../Images/BlueAndroidOnBlackSmall.png');
@@ -514,16 +524,6 @@
     position: fixed;
     top: 20vh;
     left: 4%;
-}
-.signupcontrols
-{
-    line-height: 3.2vh;
-    font-size: 2.4vh;
-    font-family: Arial, Verdana;
-    color: lemonchiffon;
-    margin-top: 2vh;
-    margin-left: 2%;
-    margin-bottom: 1vh;
 }
 .signupdisclaimer
 {

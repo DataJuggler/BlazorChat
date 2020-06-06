@@ -153,7 +153,7 @@ namespace BlazorChat.Pages
                                 if (NullHelper.Exists(user))
                                 {  
                                     // get the key
-                                    string key = EnvironmentVariableHelper.GetEnvironmentVariableValue("FiveByFiveGame");
+                                    string key = EnvironmentVariableHelper.GetEnvironmentVariableValue("BlazorChat");
 
                                     // if the key was found
                                     if (TextHelper.Exists(key))

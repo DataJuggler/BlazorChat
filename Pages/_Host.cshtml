@@ -11,15 +11,12 @@
     <base href="~/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link href="css/site.css" rel="stylesheet" />
-    <link href="~/_content/DataJuggler.Blazor.Components/css/site.css" rel="stylesheet" />
     <link href="~/_content/DataJuggler.Blazor.Components/css/circle.css" rel="stylesheet" />
-    <link href="~/_content/DataJuggler.Blazor.Components/css/DataJuggler.Blazor.Components.css" rel="stylesheet" />
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 <body>
     <app>
         @(await Html.RenderComponentAsync<App>(RenderMode.ServerPrerendered))
-        
     </app>
     <script src="_framework/blazor.server.js"></script>
     <script src="~/_content/Microsoft.AspNetCore.ProtectedBrowserStorage/protectedBrowserStorage.js"></script>

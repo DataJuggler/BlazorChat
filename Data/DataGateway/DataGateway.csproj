@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ApplicationLogicComponent\ApplicationLogicComponent.csproj" />
     <ProjectReference Include="..\DataAccessComponent\DataAccessComponent.csproj" />
     <ProjectReference Include="..\ObjectLibrary\ObjectLibrary.csproj" />

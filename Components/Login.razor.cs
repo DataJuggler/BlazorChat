@@ -2,22 +2,20 @@
 
 #region using statements
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using ApplicationLogicComponent.Connection;
+using BlazorChat.Enumerations;
+using DataGateway.Services;
+using DataJuggler.Blazor.Components;
+using DataJuggler.Blazor.Components.Interfaces;
+using DataJuggler.Core.Cryptography;
 using DataJuggler.UltimateHelper.Core;
 using DataJuggler.UltimateHelper.Core.Objects;
-using DataJuggler.Blazor.Components.Interfaces;
-using DataJuggler.Blazor.Components;
-using ObjectLibrary.BusinessObjects;
-using DataGateway.Services;
-using ObjectLibrary.Enumerations;
-using DataJuggler.Core.Cryptography;
 using Microsoft.AspNetCore.Components;
+using ObjectLibrary.BusinessObjects;
+using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using BlazorChat.Enumerations;
-using ApplicationLogicComponent.Connection;
 
 #endregion
 
