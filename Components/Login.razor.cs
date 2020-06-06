@@ -506,23 +506,21 @@ namespace BlazorChat.Components
                     ValidationMessage = "You must enter a user name or an email address";
                 }
 
-                // if the user exists
-                if (NullHelper.Exists(user))
-                {
-                    // Start Background Thread
+                // Start Background Thread whether user was found or not.
+                // If not found, it will be handled in the ProcessVerifyPassword.
+                // This fixes bug of sometimes Login doesn't work (I think).
 
-                    // Create a Thread to Process the Signup
-                    Thread thread = new Thread(ProcessVerifyPassword);
+                // Create a Thread to Process the Signup
+                Thread thread = new Thread(ProcessVerifyPassword);
 
-                    // Set the value for the property 'IsBackground' to true                        
-                    thread.IsBackground = true;
+                // Set the value for the property 'IsBackground' to true                        
+                thread.IsBackground = true;
 
-                    // Startup the thread and pass in the SignUp model
-                    thread.Start(user);
+                // Startup the thread and pass in the SignUp model
+                thread.Start(user);
 
-                    // set the return value to true
-                    started = true;
-                }
+                // set the return value to true
+                started = true;
                 
                 // return value
                 return started;
