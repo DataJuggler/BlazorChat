@@ -34,6 +34,7 @@ namespace BlazorChat
         private BubbleColorEnum bubbleColor;
         private string imageUrl;
         private bool isPrivate;
+        private DateTime sentTime;
         #endregion
 
         #region Methods
@@ -177,6 +178,17 @@ namespace BlazorChat
             {
                 get { return sent; }
                 set { sent = value; }
+            }
+            #endregion
+            
+            #region SentTime
+            /// <summary>
+            /// This property gets or sets the value for 'SentTime'.
+            /// </summary>
+            public DateTime SentTime
+            {
+                get { return sentTime; }
+                set { sentTime = value; }
             }
             #endregion
             

@@ -34,6 +34,7 @@ namespace BlazorChat.Components
         private string textAlign;
         private string leftStyle;
         private string htmlText;
+        private string sentTime;
         #endregion
 
         #region Constructor
@@ -330,6 +331,7 @@ namespace BlazorChat.Components
                     {
                         // Set the text
                         Text = message.Text;
+                        SentTime = message.Sent.ToShortDateString() + " " + message.Sent.ToShortTimeString();
                         From = message.FromName;
 
                          // Use 4 percent
@@ -367,6 +369,17 @@ namespace BlazorChat.Components
             {
                 get { return name; }
                 set { name = value; }
+            }
+            #endregion
+            
+            #region SentTime
+            /// <summary>
+            /// This property gets or sets the value for 'SentTime'.
+            /// </summary>
+            public string SentTime
+            {
+                get { return sentTime; }
+                set { sentTime = value; }
             }
             #endregion
             

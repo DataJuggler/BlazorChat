@@ -312,6 +312,7 @@
     position: relative;
     left: 14%;
     top: 4vh;
+    vertical-align: bottom;
 }
 .height200
 {
@@ -560,6 +561,12 @@
     width: 100%;
     margin-bottom: 1vh;
     float: right;
+}
+.timestamp
+{
+    font-size: 1.4vh;
+    margin-top: .2%;
+    margin-right: .4%;
 }
 .titlecolumn
 {

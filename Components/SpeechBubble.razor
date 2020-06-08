@@ -37,18 +37,14 @@
     color: limegreen;
     position: relative;
     left: @LeftStyle;
-    top: 0vh;
+    top: .4vh;
 </Styled>
 
 <div class="@BubbleStyle">
-    @if ((HasMessage) && (Message.IsPrivate))
-    { 
-        <div class="@MessageHeader">@FullFrom</div>
-    }
-    else
-    {
-        <div class="@MessageHeader">@From</div>
-    }
+    <div class="@MessageHeader">
+        <span class="timestamp">@SentTime</span>
+        @FullFrom
+    </div>
     <div class="@TextStyle">
         <span>@(((MarkupString)HtmlText).Sanitize())</span>
     </div>

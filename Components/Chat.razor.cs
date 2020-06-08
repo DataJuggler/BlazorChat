@@ -307,6 +307,7 @@ namespace BlazorChat.Components
                 message.Text = MessageText;
                 message.FromId = Id;
                 message.FromName = SubscriberName;
+                message.SentTime = DateTime.Now;
 
                 // Set the Time
                 message.Sent = DateTime.Now;
