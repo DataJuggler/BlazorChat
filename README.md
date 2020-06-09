@@ -34,7 +34,7 @@ My connection to SQL Server Express looks like this using Windows Authentication
 Data Source=[ServerName]\SQLExpress;Initial Catalog=BlazorChat;Integrated Security=True
 
 Replace ServerName with the name of your SQL Server Instance. The easiest way to get your server name is login
-to SQL Server Management Studio, and copy the User Name it tries to log you in with, if you have it saved.
+to SQL Server Management Studio, and copy the Server Name it tries to log you in with, if you have it saved.
 
 My open source project DataTier.Net mentioned in Step 2 comes with a Connection String Builder app, located in the Tools folder:
 
