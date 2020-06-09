@@ -25,6 +25,14 @@ Please subscribe to my YouTube channel.
 
 <b>Step 3:</b> Create a System Environment Variable with the following values:
 
+Tip: To create a System Environment Variable, click on the Search Icon in Windows 10, and start typing 'Edit System Environment Variables' and make sure to use the System settings at the bottom, not the User Settings at the top:
+
+In the end my setting looks like this, although my actual Server name is hidden.
+
+<br>
+<img src=https://github.com/DataJuggler/SharedRepo/blob/master/Shared/Images/EditSystemEnivonmentVariables.png>
+<br>
+
 Name: BlazorChat
 
 Value: Paste in the connection string to your BlazorChat database created in step 1. 
