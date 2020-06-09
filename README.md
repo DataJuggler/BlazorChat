@@ -3,7 +3,7 @@
 https://blazorchat.com is now live! Now that it is online, there are lots of things I need to do to improve it.
 Please report any bugs by creating an issue here.
 
-Blazor Chat was originally a sample project of mine DataJuggler.Blazor.Components, but I decided it will be easier to maintain in its own project.
+Blazor Chat was originally a sample project of my Nuget package DataJuggler.Blazor.Components, but I decided it will be easier to maintain in its own project.
 
 <br>
 <img src=https://github.com/DataJuggler/SharedRepo/blob/master/Shared/Images/BlazorChat.png>
