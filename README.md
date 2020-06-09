@@ -1,4 +1,4 @@
-# BlazorChat
+# Blazor Chat
 
 https://blazorchat.com is now live! Now that it is online, there are lots of things I need to do to improve it.
 Please report any bugs by creating an issue here.
