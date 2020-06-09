@@ -66,7 +66,7 @@ The position is fine for a returning user, so I hate to dabble with it, but plea
 came from PixelDatabase.Net.
 
 <b>3. A couple of times a login failed and I was not shown a message.</b><br>
-I have added some code to try and fix this since, but not sure if it helped or not at this point yet</b>
+I believe this issue is now fixed, but only time will tell.
 
 <br>
 <b>Geek Zone</b>
