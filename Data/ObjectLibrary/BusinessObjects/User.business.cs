@@ -18,6 +18,7 @@ namespace ObjectLibrary.BusinessObjects
         #region Private Variables
         private bool findByEmailAddress;
         private bool findByUserName;
+        private bool city;
         #endregion
 
         #region Constructor
@@ -44,6 +45,17 @@ namespace ObjectLibrary.BusinessObjects
 
         #region Properties
 
+            #region City
+            /// <summary>
+            /// This property gets or sets the value for 'City'.
+            /// </summary>
+            public bool City
+            {
+                get { return city; }
+                set { city = value; }
+            }
+            #endregion
+            
             #region FindByEmailAddress
             /// <summary>
             /// This property gets or sets the value for 'FindByEmailAddress'.

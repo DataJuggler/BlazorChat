@@ -62,11 +62,11 @@ namespace BlazorChat
 
         #region Properties
 
-        #region BlockedList
-        /// <summary>
-        /// This property gets or sets the value for 'BlockedList'.
-        /// </summary>
-        public List<Guid> BlockedList
+            #region BlockedList
+            /// <summary>
+            /// This property gets or sets the value for 'BlockedList'.
+            /// </summary>
+            public List<Guid> BlockedList
             {
                 get { return blockedList; }
                 set { blockedList = value; }
