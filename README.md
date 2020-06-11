@@ -1,12 +1,12 @@
-# BlazorChat
+# Blazor Chat
 
 https://blazorchat.com is now live! Now that it is online, there are lots of things I need to do to improve it.
 Please report any bugs by creating an issue here.
 
-Blazor Chat was originally a sample project of mine DataJuggler.Blazor.Components, but I decided it will be easier to maintain in its own project.
+Blazor Chat was originally a sample project of my Nuget package DataJuggler.Blazor.Components, but I decided it will be easier to maintain in its own project.
 
 <br>
-<img src=https://github.com/DataJuggler/SharedRepo/blob/master/Shared/Images/BlazorChatOwnRepo.png>
+<img src=https://github.com/DataJuggler/SharedRepo/blob/master/Shared/Images/BlazorChat.png>
 <br>
 
 To run this sample you will need SQL Server or SQL Server Express.
@@ -25,6 +25,14 @@ Please subscribe to my YouTube channel.
 
 <b>Step 3:</b> Create a System Environment Variable with the following values:
 
+Tip: To create a System Environment Variable, click on the Search Icon in Windows 10, and start typing 'Edit System Environment Variables' and make sure to use the System settings at the bottom, not the User Settings at the top:
+
+In the end my setting looks like this, although my actual Server name is hidden.
+
+<br>
+<img src=https://github.com/DataJuggler/SharedRepo/blob/master/Shared/Images/EditSystemEnivonmentVariables.png>
+<br>
+
 Name: BlazorChat
 
 Value: Paste in the connection string to your BlazorChat database created in step 1. 
@@ -34,7 +42,7 @@ My connection to SQL Server Express looks like this using Windows Authentication
 Data Source=[ServerName]\SQLExpress;Initial Catalog=BlazorChat;Integrated Security=True
 
 Replace ServerName with the name of your SQL Server Instance. The easiest way to get your server name is login
-to SQL Server Management Studio, and copy the User Name it tries to log you in with, if you have it saved.
+to SQL Server Management Studio, and copy the Server Name it tries to log you in with, if you have it saved.
 
 My open source project DataTier.Net mentioned in Step 2 comes with a Connection String Builder app, located in the Tools folder:
 
@@ -58,7 +66,7 @@ The position is fine for a returning user, so I hate to dabble with it, but plea
 came from PixelDatabase.Net.
 
 <b>3. A couple of times a login failed and I was not shown a message.</b><br>
-I have added some code to try and fix this since, but not sure if it helped or not at this point yet</b>
+I believe this issue is now fixed, but only time will tell.
 
 <br>
 <b>Geek Zone</b>
