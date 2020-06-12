@@ -36,10 +36,10 @@ namespace DataGateway.Services
                 // If the emailAddress string exists
                 if (TextHelper.Exists(emailAddress))
                 {
-                    // Create a new instance of a 'Gateway' object, and set the connectionName
+                   // Create a new instance of a 'Gateway' object, and set the connectionName
                     Gateway gateway = new Gateway(Connection.Name);
                     
-                    // load the sites
+                    // find the user by EmailAddress
                     user = gateway.FindUserByEmailAddress(emailAddress);
                 }
                 
@@ -64,7 +64,7 @@ namespace DataGateway.Services
                     // Create a new instance of a 'Gateway' object, and set the connectionName
                     Gateway gateway = new Gateway(Connection.Name);
                     
-                    // load the sites
+                    // find the user by UserName
                     user = gateway.FindUserByUserName(userName);
                 }
                 

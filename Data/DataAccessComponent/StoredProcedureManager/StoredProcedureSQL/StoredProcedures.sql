@@ -6,7 +6,7 @@ Go
 -- =========================================================
 -- Procure Name: User_Insert
 -- Author:           Data Juggler - Data Tier.Net Procedure Generator
--- Create Date:   6/5/2020
+-- Create Date:   6/11/2020
 -- Description:    Insert a new User
 -- =========================================================
 
@@ -75,7 +75,7 @@ Go
 -- =========================================================
 -- Procure Name: User_Update
 -- Author:           Data Juggler - Data Tier.Net Procedure Generator
--- Create Date:   6/5/2020
+-- Create Date:   6/11/2020
 -- Description:    Update an existing User
 -- =========================================================
 
@@ -155,7 +155,7 @@ Go
 -- =========================================================
 -- Procure Name: User_Find
 -- Author:           Data Juggler - Data Tier.Net Procedure Generator
--- Create Date:   6/5/2020
+-- Create Date:   6/11/2020
 -- Description:    Find an existing User
 -- =========================================================
 
@@ -212,7 +212,7 @@ Go
 -- =========================================================
 -- Procure Name: User_Delete
 -- Author:           Data Juggler - Data Tier.Net Procedure Generator
--- Create Date:   6/5/2020
+-- Create Date:   6/11/2020
 -- Description:    Delete an existing User
 -- =========================================================
 
@@ -266,7 +266,7 @@ Go
 -- =========================================================
 -- Procure Name: User_FetchAll
 -- Author:           Data Juggler - Data Tier.Net Procedure Generator
--- Create Date:   6/5/2020
+-- Create Date:   6/11/2020
 -- Description:    Returns all User objects
 -- =========================================================
 
@@ -310,6 +310,72 @@ BEGIN
     From [User]
 
 END
+
+-- Begin Custom Methods
+
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+Go
+-- =========================================================
+-- Procure Name: User_FindByEmailAddress
+-- Author:           Data Juggler - Data Tier.Net Procedure Generator
+-- Create Date:   6/11/2020
+-- Description:    Find an existing User for the EmailAddress given.
+-- =========================================================
+
+-- Check if the procedure already exists
+IF EXISTS (select * from syscomments where id = object_id ('User_FindByEmailAddress'))
+
+    -- Procedure Does Exist, Drop First
+    BEGIN
+
+        -- Execute Drop
+        Drop Procedure User_FindByEmailAddress
+
+        -- Test if procedure was dropped
+        IF OBJECT_ID('dbo.User_FindByEmailAddress') IS NOT NULL
+
+            -- Print Line Drop Failed
+            PRINT '<<< Drop Failed On Procedure User_FindByEmailAddress >>>'
+
+        Else
+
+            -- Print Line Procedure Dropped
+            PRINT '<<< Drop Suceeded On Procedure User_FindByEmailAddress >>>'
+
+    End
+
+GO
+
+Create PROCEDURE User_FindByEmailAddress
+
+    -- Create @EmailAddress Paramater
+    @EmailAddress nvarchar(80)
+
+AS
+BEGIN
+
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON
+
+    -- Begin Select Statement
+    Select [Active],[CreatedDate],[EmailAddress],[EmailVerified],[Id],[IsAdmin],[LastLoginDate],[Name],[PasswordHash],[Premium],[PremiumExpires],[TotalLogins],[UserName]
+
+    -- From tableName
+    From [User]
+
+    -- Find Matching Record
+    Where [EmailAddress] = @EmailAddress
+
+    -- Order by Name
+    Order By [Name]
+
+END
+
+
+-- End Custom Methods
 
 -- Thank you for using DataTier.Net.
 

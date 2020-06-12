@@ -8,6 +8,7 @@ using ObjectLibrary.BusinessObjects;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 
 #endregion
 
@@ -389,4 +390,3 @@ namespace DataGateway
     #endregion
 
 }
-
