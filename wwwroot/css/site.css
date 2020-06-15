@@ -641,6 +641,28 @@
     line-height: 3.2vh;
     font-size: 2.8vh;
 }
+.youtube
+{
+    background-image: url('../images/YouTube.png'); 
+    display: inline;
+    outline: none;
+    border: none;
+    background-size: 100% 100%;
+    width: 12%;
+    height: 8vh;
+    float: right;
+    position: fixed;
+    top: 5.6vh;
+    right: 5.2%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.youtube:focus
+{
+    outline: none;
+    border: none;
+}
+
 body 
 {
     background-image: url('../images/Wall.png');
