@@ -1,7 +1,6 @@
 # Blazor Chat
 
-https://blazorchat.com is now live! Now that it is online, there are lots of things I need to do to improve it.
-Please report any bugs by creating an issue here.
+I took https://blazorchat.com off line, and someone else bought the domain.
 
 Blazor Chat was originally a sample project of my Nuget package DataJuggler.Blazor.Components, but I decided it will be easier to maintain in its own project.
 
