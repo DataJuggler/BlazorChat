@@ -1,6 +1,6 @@
 # Blazor Chat
 
-I took https://blazorchat.com off line, and someone else bought the domain.
+I took the site down because it wasn't worth paying for it every year.
 
 Blazor Chat was originally a sample project of my Nuget package DataJuggler.Blazor.Components, but I decided it will be easier to maintain in its own project.
 
